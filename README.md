@@ -42,7 +42,7 @@
 - [input](#input)
 - [textarea](#textarea)
 - [list](#list)
-- [multiselect](#multiselect) – выпадающий список элементов с выбором нескольких
+- [multiselect](#multiselect)
 - [radio](#radio) – список элементов с выбором одного
 - [audio](#audio) - выпадающий список элементов с выбором одного и возможность догрузить свое аудио
 
@@ -120,7 +120,7 @@
 `type` – тип поля  
 `field` – ключ поля при отправке данных  
 `titleTranslaterKey` – названия поля (ключ из словаря)  
-`itemsServerKey` – ключ для получения элементов с сервера
+`itemsServerKey` – ключ для получения элементов с сервера  
 `defaultValue` (необязательное) – значение поля по умолчанию  
 `placeholderTranslaterKey` (необязательное) – placeholder для поля (ключ из словаря)  
 `hintTranslaterKey` (необязательное) – текст подсказки (ключ из словаря)  
@@ -139,3 +139,34 @@
     defaultValue: 'item2'
   }
 ```
+
+
+<a id="multiselect"></a>
+## Multiselect
+
+**Описание:** Выпадающий список элементов с выбором нескольких  
+  
+**Поля:**  
+`type` – тип поля  
+`field` – ключ поля при отправке данных  
+`titleTranslaterKey` – названия поля (ключ из словаря)  
+`itemsServerKey` – ключ для получения элементов с сервера  
+`defaultValue` (необязательное) – значение поля по умолчанию  
+`placeholderTranslaterKey` (необязательное) – placeholder для поля (ключ из словаря)  
+`hintTranslaterKey` (необязательное) – текст подсказки (ключ из словаря)  
+`required` (необязательное) – обязательное поле, выводит ошибку, если поле пустое  
+`validations` (необязательное) – массив объектов валидаций (FormValidation[])  
+
+**Пример использования:**
+
+```js
+  {
+    type: 'multiselect',
+    field: 'extensions',
+    titleTranslaterKey: 'Extensions',
+    placeholderTranslaterKey: 'Select members...',
+    itemsServerKey: 'key1',
+    defaultValue: []
+  }
+```
+

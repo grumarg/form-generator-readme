@@ -41,7 +41,7 @@
 
 - [input](#input)
 - [textarea](#textarea)
-- [list](#list) – выпадающий список элементов с выбором одного
+- [list](#list)
 - [multiselect](#multiselect) – выпадающий список элементов с выбором нескольких
 - [radio](#radio) – список элементов с выбором одного
 - [audio](#audio) - выпадающий список элементов с выбором одного и возможность догрузить свое аудио
@@ -82,6 +82,8 @@
     ],
   }
 ```
+
+
 <a id="textarea"></a>
 ## Textarea
 
@@ -91,10 +93,10 @@
 `type` – тип поля  
 `field` – ключ поля при отправке данных  
 `titleTranslaterKey` – названия поля (ключ из словаря)  
-`defaultValue` (необязательное) – значение поля по умолчанию
+`defaultValue` (необязательное) – значение поля по умолчанию  
 `placeholderTranslaterKey` (необязательное) – placeholder для поля (ключ из словаря)  
 `hintTranslaterKey` (необязательное) – текст подсказки (ключ из словаря)  
-`required` (необязательное) – обязательное поле, выводит ошибку, если поле пустое
+`required` (необязательное) – обязательное поле, выводит ошибку, если поле пустое  
 `validations` (необязательное) – массив объектов валидаций (FormValidation[])  
 
 **Пример использования:**
@@ -105,5 +107,35 @@
     field: 'description',
     titleTranslaterKey: 'Description',
     placeholderTranslaterKey: 'Type comment...',
+  }
+```
+
+
+<a id="list"></a>
+## List
+
+**Описание:** Выпадающий список элементов с выбором одного  
+  
+**Поля:**  
+`type` – тип поля  
+`field` – ключ поля при отправке данных  
+`titleTranslaterKey` – названия поля (ключ из словаря)  
+`itemsServerKey` – ключ для получения элементов с сервера
+`defaultValue` (необязательное) – значение поля по умолчанию  
+`placeholderTranslaterKey` (необязательное) – placeholder для поля (ключ из словаря)  
+`hintTranslaterKey` (необязательное) – текст подсказки (ключ из словаря)  
+`required` (необязательное) – обязательное поле, выводит ошибку, если поле пустое  
+`validations` (необязательное) – массив объектов валидаций (FormValidation[])  
+
+**Пример использования:**
+
+```js
+  {
+    type: 'list',
+    field: 'strategy',
+    titleTranslaterKey: 'Strategy', 
+    placeholderTranslaterKey: 'Select ring strategy...',
+    itemsServerKey: 'key1',
+    defaultValue: 'item2'
   }
 ```

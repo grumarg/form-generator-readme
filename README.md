@@ -39,11 +39,43 @@
 
 ### Типы полей:
 
-- **input** – текстовое поле
+- **input**
 - **textarea** – текстовое поле с переносом строки
 - **list** – выпадающий список элементов с выбором одного
 - **multiselect** – выпадающий список элементов с выбором нескольких
 - **radio** – список элементов с выбором одного
 - **audio** - выпадающий список элементов с выбором одного и возможность догрузить свое аудио
 
-# Типы полей:
+## Input
+
+**Описание:** Одиночное текстовое поле.  
+
+**Поля:**  
+`type` – тип поля  
+`field` – ключ поля при отправке данных  
+`titleTranslaterKey` – названия поля (ключ из словаря)  
+`placeholderTranslaterKey` (?) – placeholder для поля (ключ из словаря)  
+`hintTranslaterKey` (?) – текст подсказки (ключ из словаря)  
+`validations` (?) – массив объектов валидаций (FormValidation[])  
+
+**Пример использования:**
+
+```js
+  {
+    type: 'input',
+    field: 'password',
+    titleTranslaterKey: 'Password',
+    placeholderTranslaterKey: 'Enter password...',
+    hintTranslaterKey: "Password must contains at least 8 symbols...",
+    validations: [
+      {
+        pattern: '.{8,}',
+        flags: 'g',
+        errorMessageTranslaterKey: '8+ symbols',
+      }, {
+        pattern: '[A-Z]',
+        errorMessageTranslaterKey: 'Password must contains at least one capital A-Z',
+      }
+    ],
+  }
+```

@@ -43,7 +43,7 @@
 - [textarea](#textarea)
 - [list](#list)
 - [multiselect](#multiselect)
-- [radio](#radio) – список элементов с выбором одного
+- [radio](#radio)
 - [audio](#audio) - выпадающий список элементов с выбором одного и возможность догрузить свое аудио
 
 <a id="input"></a>
@@ -169,4 +169,35 @@
     defaultValue: []
   }
 ```
+
+<a id="radio"></a>
+## Radio
+
+**Описание:** Список элементов с выбором одного
+  
+**Поля:**  
+`type` – тип поля  
+`field` – ключ поля при отправке данных  
+`titleTranslaterKey` – названия поля (ключ из словаря)  
+`itemsServerKey` – ключ для получения элементов с сервера  
+`defaultValue` (необязательное) – значение поля по умолчанию  
+`placeholderTranslaterKey` (необязательное) – placeholder для поля (ключ из словаря)  
+`hintTranslaterKey` (необязательное) – текст подсказки (ключ из словаря)  
+`required` (необязательное) – обязательное поле, выводит ошибку, если поле пустое  
+`validations` (необязательное) – массив объектов валидаций (FormValidation[])  
+
+**Пример использования:**
+
+```js
+  {
+    type: 'radio', 
+    field: 'true',
+    titleTranslaterKey: 'True',
+    placeholderTranslaterKey: 'Select sound...', 
+    itemsServerKey: 'key1',
+    defaultValue: 'item1',
+    required: true
+  }
+```
+
 

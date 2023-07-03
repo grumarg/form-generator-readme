@@ -44,7 +44,7 @@
 - [list](#list)
 - [multiselect](#multiselect)
 - [radio](#radio)
-- [audio](#audio) - выпадающий список элементов с выбором одного и возможность догрузить свое аудио
+- [audio](#audio)
 
 <a id="input"></a>
 ## Input
@@ -201,3 +201,29 @@
 ```
 
 
+<a id="audio"></a>
+## Audio
+
+**Описание:** Выпадающий список элементов с выбором одного и возможностью загрузить своё аудио
+  
+**Поля:**  
+`type` – тип поля  
+`field` – ключ поля при отправке данных  
+`titleTranslaterKey` – названия поля (ключ из словаря)  
+`itemsServerKey` – ключ для получения элементов с сервера  
+`defaultValue` (необязательное) – значение поля по умолчанию  
+`placeholderTranslaterKey` (необязательное) – placeholder для поля (ключ из словаря)  
+`hintTranslaterKey` (необязательное) – текст подсказки (ключ из словаря)  
+`required` (необязательное) – обязательное поле, выводит ошибку, если поле пустое  
+`validations` (необязательное) – массив объектов валидаций (FormValidation[])  
+
+**Пример использования:**
+
+```js
+ {
+    type: 'audio', 
+    field: 'sound',
+    titleTranslaterKey: 'Sound',
+    placeholderTranslaterKey: 'Select sound...', 
+  }
+```

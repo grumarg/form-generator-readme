@@ -1,3 +1,4 @@
+<a id="readme-top"></a>
 # Инструкция Form Generator
 
 Документация создания полей формы по json-подобному описанию. 
@@ -46,6 +47,8 @@
 - [radio](#radio)
 - [audio](#audio)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <a id="input"></a>
 ## Input
 
@@ -82,6 +85,7 @@
     ],
   }
 ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <a id="textarea"></a>
@@ -109,6 +113,7 @@
     placeholderTranslaterKey: 'Type comment...',
   }
 ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <a id="list"></a>
@@ -139,6 +144,7 @@
     defaultValue: 'item2'
   }
 ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <a id="multiselect"></a>
@@ -169,6 +175,7 @@
     defaultValue: []
   }
 ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <a id="radio"></a>
 ## Radio
@@ -199,6 +206,7 @@
     required: true
   }
 ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <a id="audio"></a>
@@ -227,3 +235,4 @@
     placeholderTranslaterKey: 'Select sound...', 
   }
 ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

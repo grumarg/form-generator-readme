@@ -135,7 +135,7 @@
 `field` – ключ поля при отправке данных  
 `titleTranslaterKey` – названия поля (ключ из словаря)  
 `itemsServerKey` – ключ для получения элементов с сервера  
-`staticList` – список элементов по умолчанию (альтернатива `itemsServerKey`)
+`staticList` – список элементов по умолчанию (альтернатива `itemsServerKey`)  
 `defaultValue` (необязательное) – значение поля по умолчанию  
 `placeholderTranslaterKey` (необязательное) – placeholder для поля (ключ из словаря)  
 `hintTranslaterKey` (необязательное) – текст подсказки (ключ из словаря)  
@@ -167,7 +167,7 @@
 `field` – ключ поля при отправке данных  
 `titleTranslaterKey` – названия поля (ключ из словаря)  
 `itemsServerKey` – ключ для получения элементов с сервера  
-`staticList` – список элементов по умолчанию (альтернатива `itemsServerKey`)
+`staticList` – список элементов по умолчанию (альтернатива `itemsServerKey`)  
 `defaultValue` (необязательное) – значение поля по умолчанию  
 `placeholderTranslaterKey` (необязательное) – placeholder для поля (ключ из словаря)  
 `hintTranslaterKey` (необязательное) – текст подсказки (ключ из словаря)  
@@ -198,7 +198,7 @@
 `field` – ключ поля при отправке данных  
 `titleTranslaterKey` – названия поля (ключ из словаря)  
 `itemsServerKey` – ключ для получения элементов с сервера  
-`staticList` – список элементов по умолчанию (альтернатива `itemsServerKey`)
+`staticList` – список элементов по умолчанию (альтернатива `itemsServerKey`)  
 `defaultValue` (необязательное) – значение поля по умолчанию  
 `placeholderTranslaterKey` (необязательное) – placeholder для поля (ключ из словаря)  
 `hintTranslaterKey` (необязательное) – текст подсказки (ключ из словаря)  
@@ -231,7 +231,7 @@
 `field` – ключ поля при отправке данных  
 `titleTranslaterKey` – названия поля (ключ из словаря)  
 `itemsServerKey` – ключ для получения элементов с сервера  
-`staticList` – список элементов по умолчанию (альтернатива `itemsServerKey`)
+`staticList` – список элементов по умолчанию (альтернатива `itemsServerKey`)  
 `defaultValue` (необязательное) – значение поля по умолчанию  
 `placeholderTranslaterKey` (необязательное) – placeholder для поля (ключ из словаря)  
 `hintTranslaterKey` (необязательное) – текст подсказки (ключ из словаря)  

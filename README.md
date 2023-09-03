@@ -30,8 +30,8 @@
 ```js
   type ListItem = {
     id?: MongoId,
-    key: string,
-    value: string
+    keyword: string,
+    content: string
   }
 ```
 
@@ -151,7 +151,7 @@
     titleTranslaterKey: 'Strategy', 
     placeholderTranslaterKey: 'Select ring strategy...',
     defaultValue: 'item2',
-    itemsServerKey: 'WeekDays' // или staticList: [{ key: 'Monday', value: 'mon' }]
+    itemsServerKey: 'WeekDays' // или staticList: [{ keyword: 'Monday', content: 'mon' }]
   }
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -182,8 +182,8 @@
     field: 'extensions',
     titleTranslaterKey: 'Extensions',
     placeholderTranslaterKey: 'Select members...',
-    itemsServerKey: 'WeekDays' // или staticList: [{ key: 'Monday', value: 'mon' }, { key: 'Tuesday', value: 'tue' }]
-    defaultValue: [{ key: 'Monday', value: 'mon' }]
+    itemsServerKey: 'WeekDays' // или staticList: [{ keyword: 'Monday', content: 'mon' }, { keyword: 'Tuesday', content: 'tue' }]
+    defaultValue: [{ keyword: 'Monday', content: 'mon' }]
   }
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -213,8 +213,8 @@
     field: 'true',
     titleTranslaterKey: 'True',
     placeholderTranslaterKey: 'Select sound...', 
-    itemsServerKey: 'YesNoList' // или staticList: [{ key: 'Yes', value: 'yes' }, { key: 'No', value: 'no' }]
-    defaultValue: { key: 'Yes', value: 'yes' },
+    itemsServerKey: 'YesNoList' // или staticList: [{ keyword: 'Yes', content: 'yes' }, {keyword: 'No', content: 'no' }]
+    defaultValue: { keyword: 'Yes', content: 'yes' },
     required: true
   }
 ```
@@ -246,7 +246,7 @@
     field: 'sound',
     titleTranslaterKey: 'Sound',
     placeholderTranslaterKey: 'Select sound...',
-    itemsServerKey: 'HumanVoices' // или staticList: [{ key: 'Voice recorder 1', value: '/voices/audio.wav' }]
+    itemsServerKey: 'HumanVoices' // или staticList: [{ keyword: 'Voice recorder 1', content: '/voices/audio.wav' }]
   }
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

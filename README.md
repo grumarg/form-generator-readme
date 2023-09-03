@@ -18,11 +18,20 @@
     field: string,
     titleTranslaterKey: string,
     placeholderTranslaterKey?: string,
-    defaultValue?: string[] | string | number,
+    defaultValue?: ListItem[] | string | number,
     itemsServerKey?: string,
+    staticList?: ListItem[],
     hintTranslaterKey?: string,
     validations?: FormValidation[],
     required?: boolean
+  }
+```
+
+```js
+  type ListItem = {
+    id?: MongoId,
+    key: string,
+    value: string
   }
 ```
 
@@ -126,6 +135,7 @@
 `field` – ключ поля при отправке данных  
 `titleTranslaterKey` – названия поля (ключ из словаря)  
 `itemsServerKey` – ключ для получения элементов с сервера  
+`staticList` – список элементов по умолчанию (альтернатива `itemsServerKey`)
 `defaultValue` (необязательное) – значение поля по умолчанию  
 `placeholderTranslaterKey` (необязательное) – placeholder для поля (ключ из словаря)  
 `hintTranslaterKey` (необязательное) – текст подсказки (ключ из словаря)  
@@ -140,8 +150,8 @@
     field: 'strategy',
     titleTranslaterKey: 'Strategy', 
     placeholderTranslaterKey: 'Select ring strategy...',
-    itemsServerKey: 'key1',
-    defaultValue: 'item2'
+    defaultValue: 'item2',
+    itemsServerKey: 'WeekDays' // или staticList: [{ key: 'Monday', value: 'mon' }]
   }
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -157,6 +167,7 @@
 `field` – ключ поля при отправке данных  
 `titleTranslaterKey` – названия поля (ключ из словаря)  
 `itemsServerKey` – ключ для получения элементов с сервера  
+`staticList` – список элементов по умолчанию (альтернатива `itemsServerKey`)
 `defaultValue` (необязательное) – значение поля по умолчанию  
 `placeholderTranslaterKey` (необязательное) – placeholder для поля (ключ из словаря)  
 `hintTranslaterKey` (необязательное) – текст подсказки (ключ из словаря)  
@@ -171,8 +182,8 @@
     field: 'extensions',
     titleTranslaterKey: 'Extensions',
     placeholderTranslaterKey: 'Select members...',
-    itemsServerKey: 'key1',
-    defaultValue: []
+    itemsServerKey: 'WeekDays' // или staticList: [{ key: 'Monday', value: 'mon' }, { key: 'Tuesday', value: 'tue' }]
+    defaultValue: [{ key: 'Monday', value: 'mon' }]
   }
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -187,6 +198,7 @@
 `field` – ключ поля при отправке данных  
 `titleTranslaterKey` – названия поля (ключ из словаря)  
 `itemsServerKey` – ключ для получения элементов с сервера  
+`staticList` – список элементов по умолчанию (альтернатива `itemsServerKey`)
 `defaultValue` (необязательное) – значение поля по умолчанию  
 `placeholderTranslaterKey` (необязательное) – placeholder для поля (ключ из словаря)  
 `hintTranslaterKey` (необязательное) – текст подсказки (ключ из словаря)  
@@ -201,8 +213,8 @@
     field: 'true',
     titleTranslaterKey: 'True',
     placeholderTranslaterKey: 'Select sound...', 
-    itemsServerKey: 'key1',
-    defaultValue: 'item1',
+    itemsServerKey: 'YesNoList' // или staticList: [{ key: 'Yes', value: 'yes' }, { key: 'No', value: 'no' }]
+    defaultValue: { key: 'Yes', value: 'yes' },
     required: true
   }
 ```
@@ -219,6 +231,7 @@
 `field` – ключ поля при отправке данных  
 `titleTranslaterKey` – названия поля (ключ из словаря)  
 `itemsServerKey` – ключ для получения элементов с сервера  
+`staticList` – список элементов по умолчанию (альтернатива `itemsServerKey`)
 `defaultValue` (необязательное) – значение поля по умолчанию  
 `placeholderTranslaterKey` (необязательное) – placeholder для поля (ключ из словаря)  
 `hintTranslaterKey` (необязательное) – текст подсказки (ключ из словаря)  
@@ -232,7 +245,8 @@
     type: 'audio', 
     field: 'sound',
     titleTranslaterKey: 'Sound',
-    placeholderTranslaterKey: 'Select sound...', 
+    placeholderTranslaterKey: 'Select sound...',
+    itemsServerKey: 'HumanVoices' // или staticList: [{ key: 'Voice recorder 1', value: '/voices/audio.wav' }]
   }
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

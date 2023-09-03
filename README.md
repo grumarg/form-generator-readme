@@ -18,7 +18,7 @@
     field: string,
     titleTranslaterKey: string,
     placeholderTranslaterKey?: string,
-    defaultValue?: ListItem[] | string | number,
+    defaultValue?: ListItem[] | ListItem | string | number,
     itemsServerKey?: string,
     staticList?: ListItem[],
     hintTranslaterKey?: string,

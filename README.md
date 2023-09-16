@@ -16,7 +16,6 @@
   type FormField = {
     type: FieldType,
     field: string,
-    isActive?: boolean, 
     titleTranslaterKey: string,
     placeholderTranslaterKey?: string,
     defaultValue?: ListItem[] | ListItem | string | number,
@@ -68,7 +67,6 @@
 `type` – тип поля  
 `field` – ключ поля при отправке данных  
 `titleTranslaterKey` – названия поля (ключ из словаря)  
-`isActive` – значение, которое делает форму активной. Если значение `false` и форма создана, то она будет игнорироваться (не придет на клиент)  
 `defaultValue` (необязательное) – значение поля по умолчанию  
 `placeholderTranslaterKey` (необязательное) – placeholder для поля (ключ из словаря)  
 `hintTranslaterKey` (необязательное) – текст подсказки (ключ из словаря)  

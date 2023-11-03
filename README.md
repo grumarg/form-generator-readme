@@ -8,9 +8,17 @@
   type Form = {
     titleTranslaterKey: string,
     buttonLabelTranslaterKey?: string,
-    fields: FormField[]
+    tabs: FormTab[]
   }
 ```
+
+```js
+  type FormTab = {
+    titleTranslaterKey: string,
+    fields: FormField[],
+    expertMode?: boolean
+  }
+```  
 
 ```js
   type FormField = {
@@ -19,7 +27,7 @@
     titleTranslaterKey: string,
     placeholderTranslaterKey?: string,
     defaultValue?: ListItem[] | ListItem | string | number,
-    itemsServerKey?: string,
+    apiDataUrl?: string,
     staticList?: ListItem[],
     hintTranslaterKey?: string,
     validations?: FormValidation[],
@@ -45,7 +53,12 @@
     flags?: string,
     errorMessageTranslaterKey: string,
   }
-```
+```  
+
+Необязательное поле `expertMode` в FormTab отвечает за отображение дополнительной вкладки для описания дополнительных полей.  
+Такой Tab может быть только один.  
+<img width="735" alt="Снимок экрана 2023-11-03 в 20 27 33" src="https://github.com/grumarg/form-generator-readme/assets/70900990/2ca69ac7-7983-4eb6-958a-be79c4483ea7">
+
 
 ### Типы полей:
 
@@ -134,8 +147,8 @@
 `type` – тип поля  
 `field` – ключ поля при отправке данных  
 `titleTranslaterKey` – названия поля (ключ из словаря)  
-`itemsServerKey` – ключ для получения элементов с сервера  
-`staticList` – список элементов по умолчанию (альтернатива `itemsServerKey`)  
+`apiDataUrl` – серверный путь для получения данных  
+`staticList` – список элементов по умолчанию (альтернатива `apiDataUrl`)  
 `defaultValue` (необязательное) – значение поля по умолчанию  
 `placeholderTranslaterKey` (необязательное) – placeholder для поля (ключ из словаря)  
 `hintTranslaterKey` (необязательное) – текст подсказки (ключ из словаря)  
@@ -151,7 +164,7 @@
     titleTranslaterKey: 'Strategy', 
     placeholderTranslaterKey: 'Select ring strategy...',
     defaultValue: 'item2',
-    itemsServerKey: 'WeekDays' // или staticList: [{ keyword: 'Monday', content: 'mon' }]
+    apiDataUrl: '/builder/get-list/weekDays' // или staticList: [{ keyword: 'Monday', content: 'mon' }]
   }
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -166,8 +179,8 @@
 `type` – тип поля  
 `field` – ключ поля при отправке данных  
 `titleTranslaterKey` – названия поля (ключ из словаря)  
-`itemsServerKey` – ключ для получения элементов с сервера  
-`staticList` – список элементов по умолчанию (альтернатива `itemsServerKey`)  
+`apiDataUrl` – серверный путь для получения данных  
+`staticList` – список элементов по умолчанию (альтернатива `apiDataUrl`)  
 `defaultValue` (необязательное) – значение поля по умолчанию  
 `placeholderTranslaterKey` (необязательное) – placeholder для поля (ключ из словаря)  
 `hintTranslaterKey` (необязательное) – текст подсказки (ключ из словаря)  
@@ -182,7 +195,7 @@
     field: 'extensions',
     titleTranslaterKey: 'Extensions',
     placeholderTranslaterKey: 'Select members...',
-    itemsServerKey: 'WeekDays' // или staticList: [{ keyword: 'Monday', content: 'mon' }, { keyword: 'Tuesday', content: 'tue' }]
+    apiDataUrl: '/builder/get-list/weekDays' // или staticList: [{ keyword: 'Monday', content: 'mon' }, { keyword: 'Tuesday', content: 'tue' }]
     defaultValue: [{ keyword: 'Monday', content: 'mon' }]
   }
 ```
@@ -197,8 +210,8 @@
 `type` – тип поля  
 `field` – ключ поля при отправке данных  
 `titleTranslaterKey` – названия поля (ключ из словаря)  
-`itemsServerKey` – ключ для получения элементов с сервера  
-`staticList` – список элементов по умолчанию (альтернатива `itemsServerKey`)  
+`apiDataUrl` – серверный путь для получения данных  
+`staticList` – список элементов по умолчанию (альтернатива `apiDataUrl`)  
 `defaultValue` (необязательное) – значение поля по умолчанию  
 `placeholderTranslaterKey` (необязательное) – placeholder для поля (ключ из словаря)  
 `hintTranslaterKey` (необязательное) – текст подсказки (ключ из словаря)  
@@ -213,7 +226,7 @@
     field: 'true',
     titleTranslaterKey: 'True',
     placeholderTranslaterKey: 'Select sound...', 
-    itemsServerKey: 'YesNoList' // или staticList: [{ keyword: 'Yes', content: 'yes' }, {keyword: 'No', content: 'no' }]
+    apiDataUrl: '/builder/get-list/YesNoList' // или staticList: [{ keyword: 'Yes', content: 'yes' }, {keyword: 'No', content: 'no' }]
     defaultValue: { keyword: 'Yes', content: 'yes' },
     required: true
   }
@@ -230,8 +243,8 @@
 `type` – тип поля  
 `field` – ключ поля при отправке данных  
 `titleTranslaterKey` – названия поля (ключ из словаря)  
-`itemsServerKey` – ключ для получения элементов с сервера  
-`staticList` – список элементов по умолчанию (альтернатива `itemsServerKey`)  
+`apiDataUrl` – серверный путь для получения данных  
+`staticList` – список элементов по умолчанию (альтернатива `apiDataUrl`)  
 `defaultValue` (необязательное) – значение поля по умолчанию  
 `placeholderTranslaterKey` (необязательное) – placeholder для поля (ключ из словаря)  
 `hintTranslaterKey` (необязательное) – текст подсказки (ключ из словаря)  
@@ -246,7 +259,7 @@
     field: 'sound',
     titleTranslaterKey: 'Sound',
     placeholderTranslaterKey: 'Select sound...',
-    itemsServerKey: 'HumanVoices' // или staticList: [{ keyword: 'Voice recorder 1', content: '/voices/audio.wav' }]
+    staticList: [{ keyword: 'Voice recorder 1', content: '/voices/audio.wav' }] //  или использовать apiDataUrl
   }
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

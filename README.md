@@ -3,7 +3,7 @@
 
 Документация создания полей формы по json-подобному описанию. 
 
-### Структура Form Generator
+### Структура Form Generator  
 ```js
   type Form = {
     titleTranslaterKey: string,

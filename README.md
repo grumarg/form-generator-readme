@@ -36,7 +36,7 @@
     hintTranslaterKey?: string,
     validations?: FormValidation[],
     required?: boolean
-  }
+}
 ```
 
 ```js
